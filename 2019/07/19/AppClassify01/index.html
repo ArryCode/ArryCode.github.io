@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="恶意软件,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）##理论依据 Android权限设置恶意APP倾向于请求比良性APP更多的权限。 为了便于机器学习，作者用二进制的形式来表示APP权限的请求。设二进制向量 $P$ 表示一个APP申请权限，如果$P_i = 0$，则APP没有请求第 $">
+<meta name="description" content="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）理论依据Android权限设置恶意APP倾向于请求比良性APP更多的权限。 为了便于机器学习，作者用二进制的形式来表示APP权限的请求。设二进制向量 $P$ 表示一个APP申请权限，如果$P_i = 0$，则APP没有请求第 $i$">
+<meta name="keywords" content="恶意软件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）">
 <meta property="og:url" content="http://yoursite.com/2019/07/19/AppClassify01/index.html">
 <meta property="og:site_name" content="CY&#39; Garden">
-<meta property="og:description" content="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）##理论依据 Android权限设置恶意APP倾向于请求比良性APP更多的权限。 为了便于机器学习，作者用二进制的形式来表示APP权限的请求。设二进制向量 $P$ 表示一个APP申请权限，如果$P_i = 0$，则APP没有请求第 $">
+<meta property="og:description" content="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）理论依据Android权限设置恶意APP倾向于请求比良性APP更多的权限。 为了便于机器学习，作者用二进制的形式来表示APP权限的请求。设二进制向量 $P$ 表示一个APP申请权限，如果$P_i = 0$，则APP没有请求第 $i$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-19T10:42:35.163Z">
+<meta property="og:updated_time" content="2019-07-21T13:10:10.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）">
-<meta name="twitter:description" content="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）##理论依据 Android权限设置恶意APP倾向于请求比良性APP更多的权限。 为了便于机器学习，作者用二进制的形式来表示APP权限的请求。设二进制向量 $P$ 表示一个APP申请权限，如果$P_i = 0$，则APP没有请求第 $">
+<meta name="twitter:description" content="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）理论依据Android权限设置恶意APP倾向于请求比良性APP更多的权限。 为了便于机器学习，作者用二进制的形式来表示APP权限的请求。设二进制向量 $P$ 表示一个APP申请权限，如果$P_i = 0$，则APP没有请求第 $i$">
 
 
 
@@ -186,6 +187,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
           </a>
         </li>
       
@@ -309,8 +320,7 @@
       
 
       
-        <h2 id="Machine-Learning-for-Android-Malware-Detection-Using-Permission-and-API-Calls（2013）"><a href="#Machine-Learning-for-Android-Malware-Detection-Using-Permission-and-API-Calls（2013）" class="headerlink" title="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）"></a>Machine Learning for Android Malware Detection Using Permission and API Calls（2013）</h2><p>##理论依据</p>
-<h3 id="Android权限设置"><a href="#Android权限设置" class="headerlink" title="Android权限设置"></a>Android权限设置</h3><p>恶意APP倾向于请求比良性APP更多的权限。</p>
+        <h2 id="Machine-Learning-for-Android-Malware-Detection-Using-Permission-and-API-Calls（2013）"><a href="#Machine-Learning-for-Android-Malware-Detection-Using-Permission-and-API-Calls（2013）" class="headerlink" title="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）"></a>Machine Learning for Android Malware Detection Using Permission and API Calls（2013）</h2><h2 id="理论依据"><a href="#理论依据" class="headerlink" title="理论依据"></a>理论依据</h2><h3 id="Android权限设置"><a href="#Android权限设置" class="headerlink" title="Android权限设置"></a>Android权限设置</h3><p>恶意APP倾向于请求比良性APP更多的权限。</p>
 <p>为了便于机器学习，作者用二进制的形式来表示APP权限的请求。设二进制向量 $P$ 表示一个APP申请权限，如果$P_i = 0$，则APP没有请求第 $i$ 申请，反之则申请。</p>
 <h3 id="Android-API调用"><a href="#Android-API调用" class="headerlink" title="Android API调用"></a>Android API调用</h3><p>经过作者调研，良性APP使用API调用比恶意APP要多。</p>
 <p>同样用二进制表示，设二进制向量 $A$ 代表一个APP的API调用，若 $A_i = 0$，则该APP没有调用第 $i​$ 个API，反之则调用。</p>
@@ -337,6 +347,12 @@ APP分析器 --> 描述特性
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/恶意软件/" rel="tag"># 恶意软件</a>
+          
+        </div>
       
 
       
@@ -457,6 +473,15 @@ APP分析器 --> 描述特性
             
 
             
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
 
           </nav>
 
@@ -485,7 +510,7 @@ APP分析器 --> 描述特性
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Machine-Learning-for-Android-Malware-Detection-Using-Permission-and-API-Calls（2013）"><span class="nav-number">1.</span> <span class="nav-text">Machine Learning for Android Malware Detection Using Permission and API Calls（2013）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android权限设置"><span class="nav-number">1.1.</span> <span class="nav-text">Android权限设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-API调用"><span class="nav-number">1.2.</span> <span class="nav-text">Android API调用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#研究方法"><span class="nav-number">2.</span> <span class="nav-text">研究方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Machine-Learning-for-Android-Malware-Detection-Using-Permission-and-API-Calls（2013）"><span class="nav-number">1.</span> <span class="nav-text">Machine Learning for Android Malware Detection Using Permission and API Calls（2013）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#理论依据"><span class="nav-number">2.</span> <span class="nav-text">理论依据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android权限设置"><span class="nav-number">2.1.</span> <span class="nav-text">Android权限设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-API调用"><span class="nav-number">2.2.</span> <span class="nav-text">Android API调用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#研究方法"><span class="nav-number">3.</span> <span class="nav-text">研究方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
