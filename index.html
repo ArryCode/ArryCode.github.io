@@ -242,6 +242,270 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/22/Tensorflow学习02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小九月">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CY' Garden">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/22/Tensorflow学习02/" itemprop="url">Tensorflow学习02</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-22T19:43:49+08:00">
+                2019-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/07/22/Tensorflow学习02/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/22/Tensorflow学习02/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="第一个TensorFlow程序"><a href="#第一个TensorFlow程序" class="headerlink" title="第一个TensorFlow程序"></a>第一个TensorFlow程序</h2><p>参考B站上的视频，写一个简单的程序。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x_data = np.random.rand(<span class="number">100</span>).astype(np.float32)</span><br><span class="line">y_data = x_data * <span class="number">0.1</span> + <span class="number">0.3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">###create tensorflow structure start###</span></span><br><span class="line">Weights = tf.Variable(tf.random_uniform([<span class="number">1</span>],<span class="number">-1</span>,<span class="number">1.0</span>))</span><br><span class="line">biases = tf.Variable(tf.zeros([<span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line">y = Weights * x_data + biases</span><br><span class="line"></span><br><span class="line">loss = tf.reduce_mean(tf.square(y - y_data))</span><br><span class="line"><span class="comment">###create tensorflow structure end###</span></span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/22/Tensorflow学习01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小九月">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CY' Garden">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/22/Tensorflow学习01/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-22T10:10:18+08:00">
+                2019-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/07/22/Tensorflow学习01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/22/Tensorflow学习01/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>title: Tensorflow学习01<br>date: 2019-07-22 10:10:18<br>tags: TensorFlow</p>
+<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>TensorFlow是谷歌开发的深度学习框架。我用的参考资料是《TensorFlow实战Google深度学习框架》。</p>
+<h2 id="二、TensorFlow-环境搭建"><a href="#二、TensorFlow-环境搭建" class="headerlink" title="二、TensorFlow 环境搭建"></a>二、TensorFlow 环境搭建</h2><p>我参考的安装方法是<a href="https://blog.csdn.net/ytusdc/article/details/80252442#" target="_blank" rel="noopener">这位博主</a>。要用 Python3.5 。</p>
+<h2 id="三、TensorFlow入门"><a href="#三、TensorFlow入门" class="headerlink" title="三、TensorFlow入门"></a>三、TensorFlow入门</h2><h3 id="3-1-TensorFlow-的计算模型——计算图"><a href="#3-1-TensorFlow-的计算模型——计算图" class="headerlink" title="3.1 TensorFlow 的计算模型——计算图"></a>3.1 TensorFlow 的计算模型——计算图</h3><h3 id="3-2-TensorFlow-的数据模型——张量"><a href="#3-2-TensorFlow-的数据模型——张量" class="headerlink" title="3.2 TensorFlow 的数据模型——张量"></a>3.2 TensorFlow 的数据模型——张量</h3><h3 id="3-3-TensorFlow-的运行模型——会话"><a href="#3-3-TensorFlow-的运行模型——会话" class="headerlink" title="3.3 TensorFlow 的运行模型——会话"></a>3.3 TensorFlow 的运行模型——会话</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/22/Python基础学习05/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -581,7 +845,28 @@
       
         
           
-            <h2 id="第三章-——-函数"><a href="#第三章-——-函数" class="headerlink" title="第三章 —— 函数"></a>第三章 —— 函数</h2>
+            <h2 id="第三章-——-函数"><a href="#第三章-——-函数" class="headerlink" title="第三章 —— 函数"></a>第三章 —— 函数</h2><h3 id="3-1-函数定义"><a href="#3-1-函数定义" class="headerlink" title="3.1 函数定义"></a>3.1 函数定义</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 函数名<span class="params">(参数)</span>:</span></span><br><span class="line">    语句<span class="number">1</span></span><br><span class="line">    语句<span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> 返回值</span><br><span class="line"></span><br><span class="line"><span class="comment">#函数调用</span></span><br><span class="line">函数名(参数)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-None值"><a href="#3-2-None值" class="headerlink" title="3.2 None值"></a>3.2 None值</h3><p>在 Python 中，None表示没有值，None是 NoneType 类型中的唯一值。当函数没有设置返回值时，Python会在末尾加上 <code>return None</code> 。</p>
+<h3 id="3-3-关键字参数和print"><a href="#3-3-关键字参数和print" class="headerlink" title="3.3 关键字参数和print()"></a>3.3 关键字参数和print()</h3><p>可以设置print()函数的关键字参数，来制定打印格式。</p>
+<ul>
+<li><p>end 指定末尾打印什么，不设置的情况下，print() 函数会自动在传入的子串末尾添加了换行符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'hello'</span>)</span><br><span class="line">print(<span class="string">'world'</span>)</span><br><span class="line"><span class="comment">### 输出的结果 ###</span></span><br><span class="line">hello</span><br><span class="line">world</span><br><span class="line"></span><br><span class="line"><span class="comment">### 设置加上end关键字 ###</span></span><br><span class="line">print(<span class="string">'hello'</span>, end = <span class="string">''</span>)</span><br><span class="line">print(<span class="string">'world'</span>)</span><br><span class="line"><span class="comment">### 输出的结果 ###</span></span><br><span class="line">helloworld</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sep 自定义分割符，不设置的情况下，print() 函数会自动在传入的子串末尾添加了换行符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'cats'</span>, <span class="string">'dogs'</span>, <span class="string">'mice'</span>)</span><br><span class="line">cats dogs mice</span><br><span class="line"></span><br><span class="line"><span class="comment">### 设置sep关键字 ###</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'cats'</span>,<span class="string">'dogs'</span>,<span class="string">'mice'</span>, sep=<span class="string">','</span>)</span><br><span class="line">cats,dogs,mice</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-4-局部和全局作用域"><a href="#3-4-局部和全局作用域" class="headerlink" title="3.4 局部和全局作用域"></a>3.4 局部和全局作用域</h3><p>局部变量：在被调用函数内赋值的变量和变元，处在该函数的 ”局部作用域“ ，被称为局部变量。</p>
+<p>全局变量：在所有的函数之外赋值的变量，属于 “全局作用域”，被称为全局变量。</p>
+<ul>
+<li>局部变量不能在全局作用域内使用</li>
+<li>局部作用域不能使用其他局部作用域内的变量</li>
+<li>全局变量可以在局部作用域中读取</li>
+<li>局部变量和全局变量的名字可以相同</li>
+</ul>
+
           
         
       
@@ -1487,278 +1772,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/19/AppClassify02/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小九月">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CY' Garden">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/19/AppClassify02/" itemprop="url">Classification of Android Apps and Malware Using Deep Neural Networks（2017）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-19T18:40:43+08:00">
-                2019-07-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/07/19/AppClassify02/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/19/AppClassify02/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="理论依据"><a href="#理论依据" class="headerlink" title="理论依据"></a>理论依据</h2><h2 id="研究方法"><a href="#研究方法" class="headerlink" title="研究方法"></a>研究方法</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>文章用卷积神经网络（CNN）</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/19/AppClassify01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小九月">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CY' Garden">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/19/AppClassify01/" itemprop="url">Machine Learning for Android Malware Detection Using Permission and API Calls（2013）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-19T16:15:00+08:00">
-                2019-07-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/07/19/AppClassify01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/19/AppClassify01/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Machine-Learning-for-Android-Malware-Detection-Using-Permission-and-API-Calls（2013）"><a href="#Machine-Learning-for-Android-Malware-Detection-Using-Permission-and-API-Calls（2013）" class="headerlink" title="Machine Learning for Android Malware Detection Using Permission and API Calls（2013）"></a>Machine Learning for Android Malware Detection Using Permission and API Calls（2013）</h2><h2 id="理论依据"><a href="#理论依据" class="headerlink" title="理论依据"></a>理论依据</h2><h3 id="Android权限设置"><a href="#Android权限设置" class="headerlink" title="Android权限设置"></a>Android权限设置</h3><p>恶意APP倾向于请求比良性APP更多的权限。</p>
-<p>为了便于机器学习，作者用二进制的形式来表示APP权限的请求。设二进制向量 $P$ 表示一个APP申请权限，如果$P_i = 0$，则APP没有请求第 $i$ 申请，反之则申请。</p>
-<h3 id="Android-API调用"><a href="#Android-API调用" class="headerlink" title="Android API调用"></a>Android API调用</h3><p>经过作者调研，良性APP使用API调用比恶意APP要多。</p>
-<p>同样用二进制表示，设二进制向量 $A$ 代表一个APP的API调用，若 $A_i = 0$，则该APP没有调用第 $i​$ 个API，反之则调用。</p>
-<h2 id="研究方法"><a href="#研究方法" class="headerlink" title="研究方法"></a>研究方法</h2><pre class="mermaid">graph LR
-恶意APP与非恶意APP混合 --> APP分析器
-APP分析器 --> 描述特性
-描述特性 --> 提取特征
-提取特征 --> 机器学习算法分类
-机器学习算法分类 --> 恶意APP与非恶意APP分开</pre>
-
-<p>实验用了不同的机器学习算法，如SVM、决策树、集成学习算法Bagging，比较后，最后得出Bagging最优。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>文章提出了一种检测恶意软件的方法，但是单单从权限请求多少和API调用多少来看，可能不是特别全面。另外，APP比较大的话，生成的二进制文件的工作量就比较大。文章也没有提出用机器来对特征进行提取。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1811,7 +1824,7 @@ APP分析器 --> 描述特性
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1824,7 +1837,7 @@ APP分析器 --> 描述特性
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

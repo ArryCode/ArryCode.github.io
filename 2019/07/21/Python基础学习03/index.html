@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="第三章 —— 函数">
+<meta name="description" content="第三章 —— 函数3.1 函数定义1234567def 函数名(参数):    语句1    语句2    return 返回值#函数调用函数名(参数)  3.2 None值在 Python 中，None表示没有值，None是 NoneType 类型中的唯一值。当函数没有设置返回值时，Python会在末尾加上 return None 。 3.3 关键字参数和print()可以设置print()函数">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python基础学习03">
 <meta property="og:url" content="http://yoursite.com/2019/07/21/Python基础学习03/index.html">
 <meta property="og:site_name" content="CY&#39; Garden">
-<meta property="og:description" content="第三章 —— 函数">
+<meta property="og:description" content="第三章 —— 函数3.1 函数定义1234567def 函数名(参数):    语句1    语句2    return 返回值#函数调用函数名(参数)  3.2 None值在 Python 中，None表示没有值，None是 NoneType 类型中的唯一值。当函数没有设置返回值时，Python会在末尾加上 return None 。 3.3 关键字参数和print()可以设置print()函数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-21T13:08:55.488Z">
+<meta property="og:updated_time" content="2019-07-22T11:41:51.419Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础学习03">
-<meta name="twitter:description" content="第三章 —— 函数">
+<meta name="twitter:description" content="第三章 —— 函数3.1 函数定义1234567def 函数名(参数):    语句1    语句2    return 返回值#函数调用函数名(参数)  3.2 None值在 Python 中，None表示没有值，None是 NoneType 类型中的唯一值。当函数没有设置返回值时，Python会在末尾加上 return None 。 3.3 关键字参数和print()可以设置print()函数">
 
 
 
@@ -320,7 +320,28 @@
       
 
       
-        <h2 id="第三章-——-函数"><a href="#第三章-——-函数" class="headerlink" title="第三章 —— 函数"></a>第三章 —— 函数</h2>
+        <h2 id="第三章-——-函数"><a href="#第三章-——-函数" class="headerlink" title="第三章 —— 函数"></a>第三章 —— 函数</h2><h3 id="3-1-函数定义"><a href="#3-1-函数定义" class="headerlink" title="3.1 函数定义"></a>3.1 函数定义</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 函数名<span class="params">(参数)</span>:</span></span><br><span class="line">    语句<span class="number">1</span></span><br><span class="line">    语句<span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> 返回值</span><br><span class="line"></span><br><span class="line"><span class="comment">#函数调用</span></span><br><span class="line">函数名(参数)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-None值"><a href="#3-2-None值" class="headerlink" title="3.2 None值"></a>3.2 None值</h3><p>在 Python 中，None表示没有值，None是 NoneType 类型中的唯一值。当函数没有设置返回值时，Python会在末尾加上 <code>return None</code> 。</p>
+<h3 id="3-3-关键字参数和print"><a href="#3-3-关键字参数和print" class="headerlink" title="3.3 关键字参数和print()"></a>3.3 关键字参数和print()</h3><p>可以设置print()函数的关键字参数，来制定打印格式。</p>
+<ul>
+<li><p>end 指定末尾打印什么，不设置的情况下，print() 函数会自动在传入的子串末尾添加了换行符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'hello'</span>)</span><br><span class="line">print(<span class="string">'world'</span>)</span><br><span class="line"><span class="comment">### 输出的结果 ###</span></span><br><span class="line">hello</span><br><span class="line">world</span><br><span class="line"></span><br><span class="line"><span class="comment">### 设置加上end关键字 ###</span></span><br><span class="line">print(<span class="string">'hello'</span>, end = <span class="string">''</span>)</span><br><span class="line">print(<span class="string">'world'</span>)</span><br><span class="line"><span class="comment">### 输出的结果 ###</span></span><br><span class="line">helloworld</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sep 自定义分割符，不设置的情况下，print() 函数会自动在传入的子串末尾添加了换行符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'cats'</span>, <span class="string">'dogs'</span>, <span class="string">'mice'</span>)</span><br><span class="line">cats dogs mice</span><br><span class="line"></span><br><span class="line"><span class="comment">### 设置sep关键字 ###</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'cats'</span>,<span class="string">'dogs'</span>,<span class="string">'mice'</span>, sep=<span class="string">','</span>)</span><br><span class="line">cats,dogs,mice</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-4-局部和全局作用域"><a href="#3-4-局部和全局作用域" class="headerlink" title="3.4 局部和全局作用域"></a>3.4 局部和全局作用域</h3><p>局部变量：在被调用函数内赋值的变量和变元，处在该函数的 ”局部作用域“ ，被称为局部变量。</p>
+<p>全局变量：在所有的函数之外赋值的变量，属于 “全局作用域”，被称为全局变量。</p>
+<ul>
+<li>局部变量不能在全局作用域内使用</li>
+<li>局部作用域不能使用其他局部作用域内的变量</li>
+<li>全局变量可以在局部作用域中读取</li>
+<li>局部变量和全局变量的名字可以相同</li>
+</ul>
+
       
     </div>
     
@@ -451,7 +472,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -464,7 +485,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -497,7 +518,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章-——-函数"><span class="nav-number">1.</span> <span class="nav-text">第三章 —— 函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章-——-函数"><span class="nav-number">1.</span> <span class="nav-text">第三章 —— 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-函数定义"><span class="nav-number">1.1.</span> <span class="nav-text">3.1 函数定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-None值"><span class="nav-number">1.2.</span> <span class="nav-text">3.2 None值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-关键字参数和print"><span class="nav-number">1.3.</span> <span class="nav-text">3.3 关键字参数和print()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-局部和全局作用域"><span class="nav-number">1.4.</span> <span class="nav-text">3.4 局部和全局作用域</span></a></li></ol></li></ol></div>
             
 
           </div>
