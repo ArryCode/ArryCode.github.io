@@ -261,7 +261,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/07/22/Tensorflow学习02/" itemprop="url">Tensorflow学习02</a></h1>
+                <a class="post-title-link" href="/2019/07/22/Tensorflow学习02/" itemprop="url">Tensorflow 实现神经网络</a></h1>
         
 
         <div class="post-meta">
@@ -323,10 +323,7 @@
       
         
           
-            <h2 id="第一个TensorFlow程序"><a href="#第一个TensorFlow程序" class="headerlink" title="第一个TensorFlow程序"></a>第一个TensorFlow程序</h2><p>参考B站上的视频，写一个简单的程序。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x_data = np.random.rand(<span class="number">100</span>).astype(np.float32)</span><br><span class="line">y_data = x_data * <span class="number">0.1</span> + <span class="number">0.3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">###create tensorflow structure start###</span></span><br><span class="line">Weights = tf.Variable(tf.random_uniform([<span class="number">1</span>],<span class="number">-1</span>,<span class="number">1.0</span>))</span><br><span class="line">biases = tf.Variable(tf.zeros([<span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line">y = Weights * x_data + biases</span><br><span class="line"></span><br><span class="line">loss = tf.reduce_mean(tf.square(y - y_data))</span><br><span class="line"><span class="comment">###create tensorflow structure end###</span></span><br></pre></td></tr></table></figure>
-
-
+            <h2 id="TensorFlow-实现神经网络"><a href="#TensorFlow-实现神经网络" class="headerlink" title="TensorFlow 实现神经网络"></a>TensorFlow 实现神经网络</h2>
           
         
       
@@ -393,7 +390,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/07/22/Tensorflow学习01/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2019/07/22/Tensorflow学习01/" itemprop="url">TensorFlow入门</a></h1>
         
 
         <div class="post-meta">
@@ -455,10 +452,53 @@
       
         
           
-            <p>title: Tensorflow学习01<br>date: 2019-07-22 10:10:18<br>tags: TensorFlow</p>
-<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>TensorFlow是谷歌开发的深度学习框架。我用的参考资料是《TensorFlow实战Google深度学习框架》。</p>
+            <h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>TensorFlow是谷歌开发的深度学习框架。我用的参考资料是《TensorFlow实战Google深度学习框架》。</p>
 <h2 id="二、TensorFlow-环境搭建"><a href="#二、TensorFlow-环境搭建" class="headerlink" title="二、TensorFlow 环境搭建"></a>二、TensorFlow 环境搭建</h2><p>我参考的安装方法是<a href="https://blog.csdn.net/ytusdc/article/details/80252442#" target="_blank" rel="noopener">这位博主</a>。要用 Python3.5 。</p>
-<h2 id="三、TensorFlow入门"><a href="#三、TensorFlow入门" class="headerlink" title="三、TensorFlow入门"></a>三、TensorFlow入门</h2><h3 id="3-1-TensorFlow-的计算模型——计算图"><a href="#3-1-TensorFlow-的计算模型——计算图" class="headerlink" title="3.1 TensorFlow 的计算模型——计算图"></a>3.1 TensorFlow 的计算模型——计算图</h3><h3 id="3-2-TensorFlow-的数据模型——张量"><a href="#3-2-TensorFlow-的数据模型——张量" class="headerlink" title="3.2 TensorFlow 的数据模型——张量"></a>3.2 TensorFlow 的数据模型——张量</h3><h3 id="3-3-TensorFlow-的运行模型——会话"><a href="#3-3-TensorFlow-的运行模型——会话" class="headerlink" title="3.3 TensorFlow 的运行模型——会话"></a>3.3 TensorFlow 的运行模型——会话</h3>
+<h2 id="三、TensorFlow入门"><a href="#三、TensorFlow入门" class="headerlink" title="三、TensorFlow入门"></a>三、TensorFlow入门</h2><h3 id="3-1-TensorFlow-的计算模型——计算图"><a href="#3-1-TensorFlow-的计算模型——计算图" class="headerlink" title="3.1 TensorFlow 的计算模型——计算图"></a>3.1 TensorFlow 的计算模型——计算图</h3><p>TensorFlow 是通过一个计算图的形式来表述计算的编程系统。TensorFlow 中每个计算都是计算图上的一个节点，而节点之间的边描述了依赖关系。</p>
+<ul>
+<li>计算图的使用</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">a = tf.constant([<span class="number">1.0</span>, <span class="number">2.0</span>], name = <span class="string">"a"</span>)</span><br><span class="line">b = tf.constant([<span class="number">2.0</span>, <span class="number">3.0</span>], name = <span class="string">"b"</span>)</span><br><span class="line">result = a + b</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过 a.graph 可以查看张量所属的计算图。因为没有特意指定，所以这个计算图应该是等于当前默认的计算图</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> (a.graph <span class="keyword">is</span> tf.get_default_graph())</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<p>除了默认的计算图，TensorFlow 支持通过 tf.Graph 函数来生成新的计算图，不同图上的张量和运算不会共享。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line">g1 = tf.Graph()</span><br><span class="line"><span class="keyword">with</span> g1.as_default():</span><br><span class="line">    <span class="comment"># 在计算图g1中定义变量v并设置初始值为0</span></span><br><span class="line">    v = tf.get_variable(<span class="string">"v"</span>, shape = [<span class="number">1</span>], initializer = tf.zeros_initializer)</span><br><span class="line">    </span><br><span class="line">g2 = tf.Graph()</span><br><span class="line"><span class="keyword">with</span> g2.as_default():</span><br><span class="line">    <span class="comment"># 在计算图g1中定义变量v并设置初始值为0</span></span><br><span class="line">    v = tf.get_variable(<span class="string">"v"</span>, shape = [<span class="number">1</span>], initializer = tf.ones_initializer)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#在计算图g1中读取变量“v”</span></span><br><span class="line"><span class="keyword">with</span> tf.Session(graph = g1) <span class="keyword">as</span> sess:</span><br><span class="line">    tf.global_variables_initializer().run()</span><br><span class="line">    <span class="keyword">with</span> tf.variable_scope(<span class="string">""</span>, reuse = <span class="literal">True</span>):</span><br><span class="line">        print(sess.run(tf.get_variable(<span class="string">"v"</span>)))</span><br><span class="line">        </span><br><span class="line"><span class="comment">#在计算图g2中读取变量“v”</span></span><br><span class="line"><span class="keyword">with</span> tf.Session(graph = g2) <span class="keyword">as</span> sess:</span><br><span class="line">    tf.global_variables_initializer().run()</span><br><span class="line">    <span class="keyword">with</span> tf.variable_scope(<span class="string">""</span>, reuse = <span class="literal">True</span>):</span><br><span class="line">        print(sess.run(tf.get_variable(<span class="string">"v"</span>)))</span><br></pre></td></tr></table></figure>
+
+<p>TensorFlow 中的计算图不仅仅可以用来隔离张量和计算，它还可以提供管理张量和计算的机制。计算图可以用 tf.Graph.device 函数来指定设备。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">g = tf.Graph()</span><br><span class="line"><span class="comment">#指定计算运行的设备</span></span><br><span class="line"><span class="keyword">with</span> g.device(<span class="string">'/gpu:0'</span>):</span><br><span class="line">    result = a + b</span><br></pre></td></tr></table></figure>
+
+<p>在一个计算图中，通过集合（collection）来管理不同类型的资源。</p>
+<h3 id="3-2-TensorFlow-的数据模型——张量"><a href="#3-2-TensorFlow-的数据模型——张量" class="headerlink" title="3.2 TensorFlow 的数据模型——张量"></a>3.2 TensorFlow 的数据模型——张量</h3><p>从功能的角度，张量（tensor）可以简单认为是向量。</p>
+<p>一个张量中主要保存了三个属性：名字（name）、维度（shape）和类型（dtype）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Tensor(<span class="string">"add:0"</span>, shape=(<span class="number">2</span>,), dtype=float32)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>张量的命名：<code>node:src_output</code>，node为节点的名称，src_output 表示当前张量来自节点的第几个输出。</li>
+<li>张量的维度：数字是几就代表是几维向量</li>
+<li>张量的类型：类型唯一，且参与运算的张量类型要一致，不然程序会出错。TensorFlow支持14种不同类型，主要包括了实数（ tf.float32，tf.float64），整数（tf.int8 16 32 64，tf.uint8），布尔型（tf.bool）和复数（tf.complex64，tf.complex128）</li>
+</ul>
+<p>张量的作用：</p>
+<ul>
+<li>对中间值结果的引用，提高代码可读性</li>
+<li>当计算图构造完成后，可以用来计算结果</li>
+</ul>
+<h3 id="3-3-TensorFlow-的运行模型——会话"><a href="#3-3-TensorFlow-的运行模型——会话" class="headerlink" title="3.3 TensorFlow 的运行模型——会话"></a>3.3 TensorFlow 的运行模型——会话</h3><p>TensorFlow用会话来执行定义好的运算，会话拥有并管理TensorFlow程序运行时的所有资源。在所有计算完成之后需要关闭会话帮助系统来释放资源，否则会出现资源泄露的问题。</p>
+<p>TensorFlow中使用会话的方式一般两种：</p>
+<ul>
+<li><p>明确调用会话生成函数和关闭会话函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个会话</span></span><br><span class="line"></span><br><span class="line">sess = tf.Sesson()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用这个创建好的会话来得到关心的运算结果</span></span><br><span class="line"><span class="comment"># 比如可以调用 sess.run(result)计算结果</span></span><br><span class="line">sess.run()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭会话使得本次运行中的使用到的资源可以被释放</span></span><br><span class="line">sess.close()</span><br></pre></td></tr></table></figure>
+
+<p>使用这种模式时，在所有计算完成后必须关闭明确调用 Session.close 函数来关闭会话并释放资源。但是如果程序遭遇异常，就无法关闭，所以会有第二种模式。</p>
+</li>
+<li><p>通过Python上下文管理器来使用会话</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个会话，并通过Python上下文来管理这个会话</span></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess</span><br><span class="line">	<span class="comment"># 使用创建好的会话来计算关心的结果</span></span><br><span class="line">    see.run()</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 不需要调用Session.Close()来关闭会话</span></span><br><span class="line"><span class="comment"># 当上下文退出时会话关闭和资源释放也会自动完成</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>TensorFlow也可以指定默认的会话，当默认的会话被指定后，可以通过 tf.Tensor.eval函数来计算一个张量的取值。还提供在交互式环境下直接构建默认会话的函数 —— tf.InteractiveSession。</p>
+<p>用ConfigProto Protocol Buffer 来配置需要生成的会话，tf.ConfigProto()</p>
+
           
         
       
